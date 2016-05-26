@@ -1,9 +1,9 @@
 var webpack = require('webpack')
+var html = require('html-webpack-plugin')
+var extract = require('extract-text-webpack-plugin')
 module.exports = {
 	entry: [
-		"webpack-dev-server/client?http://localhost:8080/",
-		"webpack/hot/dev-server",
-		'index.js'
+		'./index.js'
 	],
 	output: {
 		path: __dirname + '/dist',
@@ -14,5 +14,8 @@ module.exports = {
 			{ test: /\.(png|jpg|gif|svg)$/, loader: 'url-loader?limit=8192' },
 			{ test: /\.(png|jpg|gif|svg)$/, loader: 'img' }
 		]
-	}
+	},
+	plugins: [
+		new html()
+	]
 }
