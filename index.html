@@ -55,7 +55,11 @@
 				font-family: "futura-pt-condensed",sans-serif;
 				font-style: normal;
 				font-weight: 500;
-				font-size: 3rem;
+				font-size: 1.6rem;
+				-webkit-font-smoothing: antialiased;
+			}
+			section {
+				box-sizing: border-box;
 			}
 			section.landing {
 				height: 680px;
@@ -64,19 +68,86 @@
 			    background-position: left;
 			    position: relative;
 			}
+			section.landing:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -120px;
+				height: 100%;
+				width: 20%;
+				background: red;
+				-webkit-transform: skew(-10deg, 0deg);
+				-moz-transform: skew(-10deg, 0deg);
+				-ms-transform: skew(-10deg, 0deg);
+				-o-transform: skew(-10deg, 0deg);
+				transform: skew(-10deg, 0deg);
+			}
+			#logo {
+				width: 7%;
+				max-width: 105px;
+				min-width: 70px;
+				position: absolute;
+				top: 40px;
+				left: 40px;
+				z-index: 1;
+			}
 			section.blue {
 				background-color: #183F67;
-				height: 680px;
-				background-image: url('./accent-up.png');
-			    background-repeat: no-repeat;
-			    background-position: right;
 			    position: relative;
+			    color: white;
+			    padding: 60px 0px;
+			}
+			section.blue:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: -120px;
+				height: 100%;
+				width: 20%;
+				background: white;
+				-webkit-transform: skew(-10deg, 0deg);
+				-moz-transform: skew(-10deg, 0deg);
+				-ms-transform: skew(-10deg, 0deg);
+				-o-transform: skew(-10deg, 0deg);
+				transform: skew(-10deg, 0deg);
+			}
+			section.blue h2 {
+				font-family: "futura-pt";
+				font-weight: 300;
+				font-size: 1.6rem;
+				letter-spacing: 15px;
+				margin-bottom: 30px;
+				color: rgb(179, 179, 179);
+			}
+			section.blue h2 strong {
+				font-family: "futura-pt-condensed";
+				margin-bottom: 30px;
+				font-weight: 700;
+				color: white;
+			}
+			section.blue p strong {
+				color: #54A5D9;
 			}
 			section .accent-up {
 				position: absolute;
 				right: 0px;
+				top: 0px;
 				width: 100%;
 				max-width: 186px;
+			}
+			.flow-container {
+				width: 80%;
+				margin: 0 auto;
+			}
+			.blue-blurb {
+				width: 50%;
+				max-width: 400px;
+			}
+			#elevate-line {
+				width: 97%;
+				max-width: 675px;
+				display: block;
+				margin: 0 auto;
 			}
 		</style>
 		<script src="https://use.typekit.net/bcl0jlg.js"></script>
@@ -84,16 +155,83 @@
 	</head>
 	<body>
 		<section class="landing">
-			<img src="" alt="">
+			<img id="logo" src="./summit-logo.svg" alt="logo" />
 		</section>
 		<section class="blue">
-			<h2><strong>ELEVATE</strong>YOUR CAREER</h2>
-			<img class="accent-up" src="./accent-up.png" alt="accent">
-			<p><strong>Summit Sports Group</strong> is a full-service athlete management firm dedicated to elevating our clients' <strong>careers</strong> both on and off the court.</p>
+			<!-- <img class="accent-up" src="./accent-up.png" alt="accent"> -->
+			<div class="flow-container">
+				<h2><strong>ELEVATE</strong>&nbsp;YOUR CAREER</h2>
+				<div class="blue-blurb">
+					<p><strong>Summit Sports Group</strong> is a full-service athlete management firm dedicated to elevating our clients' <strong>careers</strong> both on and off the court.</p>
+				</div>
+				<svg id="elevate-line" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 622.01 608.29">
+					<defs>
+						<style>
+							.cls-1{fill:none;}
+							.cls-1,.cls-2{stroke:#b3b3b3;stroke-miterlimit:10;}
+							.cls-2,.cls-3{fill:#fff;}
+							.cls-4{font-size:12px;fill:#54a5d9;font-family:Futura;}
+						</style>
+					</defs>
+					<title>elevate-line</title>
+					<line class="cls-1" x1="103.22" y1="385.08" x2="309.68" y2="385.08"/>
+					<line class="cls-1" x1="347.69" y1="196.38" x2="554.15" y2="196.38"/>
+					<line class="cls-2" x1="556.79" y1="196.85" x2="593.88" y2="8.62"/>
+					<circle class="cls-3" cx="556.79" cy="196.85" r="8.62"/>
+					<circle class="cls-3" cx="593.88" cy="8.62" r="8.62"/>
+					<line class="cls-2" x1="309.68" y1="384.6" x2="346.77" y2="196.38"/>
+					<circle class="cls-3" cx="309.68" cy="384.6" r="8.62"/>
+					<circle class="cls-3" cx="346.77" cy="196.38" r="8.62"/>
+					<line class="cls-2" x1="66.13" y1="573.3" x2="103.22" y2="385.08"/>
+					<circle class="cls-3" cx="66.13" cy="573.3" r="8.62"/>
+					<circle class="cls-3" cx="103.22" cy="385.08" r="8.62"/>
+					<text class="cls-4" transform="translate(29.49 358.17)">
+						PRE-DRAFT PRE
+						<tspan x="84.01" y="0">P</tspan>
+						<tspan x="89.83" y="0">AR</tspan>
+						<tspan x="105.94" y="0">A</tspan>
+						<tspan x="114.33" y="0">TION</tspan>
+					</text>
+					<text class="cls-4" transform="translate(0 608.29)">
+						P
+						<tspan x="6.48" y="0">L</tspan>
+						<tspan x="12.3" y="0">A</tspan>
+						<tspan x="20.4" y="0">YER DEVE</tspan>
+						<tspan x="75.71" y="0">L</tspan>
+						<tspan x="80.67" y="0">OPMENT</tspan>
+					</text>
+					<text class="cls-4" transform="translate(281.55 169.26)">
+						MAXIMIZE EARNI
+						<tspan x="101.01" y="0">N</tspan>
+						<tspan x="111.23" y="0">GS</tspan>
+					</text>
+					<text class="cls-4" transform="translate(242.02 418.52)">
+						BRAND MA
+						<tspan x="66.18" y="0">N</tspan>
+						<tspan x="76.38" y="0">A</tspan>
+						<tspan x="84.86" y="0">GEMENT</tspan>
+					</text>
+					<text class="cls-4" transform="translate(496.93 231.23)">
+						BUILD 
+						<tspan x="37.24" y="0">P</tspan>
+						<tspan x="43.05" y="0">A</tspan>
+						<tspan x="51.94" y="0">R</tspan>
+						<tspan x="59.06" y="0">TNERSHIPS</tspan>
+					</text>
+					<text class="cls-4" transform="translate(452.46 11.63)">
+						LIFE
+						<tspan x="21.74" y="0">S</tspan>
+						<tspan x="28.91" y="0">T</tspan>
+						<tspan x="35.29" y="0">YLE SE</tspan>
+						<tspan x="72.08" y="0">R</tspan>
+						<tspan x="78.98" y="0">VICES</tspan>
+					</text>
+				</svg>
+			</div>
 		</section>	
 		<script type="text/javascript" charset="utf-8">
 			
 		</script>
-		<<script src="./index.js" type="text/javascript" charset="utf-8" async defer></script>
+		<script src="./index.js" type="text/javascript" charset="utf-8" async defer></script>
 	</body>
 </html>
