@@ -11,13 +11,7 @@
   "devDependencies": {
     "babel-core": "^6.9.1",
     "babel-loader": "^6.2.4",
-    "file-loader": "^0.8.5",
-    "img-loader": "^1.2.2",
-    "less": "^2.7.1",
-    "less-loader": "^2.2.3",
-    "raw-loader": "^0.5.1",
-    "url-loader": "^0.5.7",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "browser-sync": "^2.12.10",
+    "gulp": "^3.9.1"
   }
 }
