@@ -39,6 +39,7 @@ controller.pin($('#landing'), 1000, {
 	}, 
 	onUnpin: function() {
 		$('.markets-links a').addClass('dark');
+		// revert #landing to position:relative, remove height specificaiton
 	}
 });
 
