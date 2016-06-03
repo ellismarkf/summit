@@ -120,14 +120,14 @@
 			}
 			#dunk { z-index: 5; }
 			#dunk2 { z-index: 3; }
-			#running { z-index: 2; }
+			#running {z-index: 2;}
 			.pin-img {
 				position: fixed;
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 				object-position: 0% 0%;
-				box-shadow: 0px 0px 15px -5px #183F67;
+				/* box-shadow: 0px 0px 15px -5px #183F67; */
 			}
 			.markets-links {
 				position: fixed;
@@ -159,14 +159,25 @@
 			.markets-links a:last-child:after {
 				display: none;
 			}
-			section.blue {
+			#hiddenMsg {
+				color: #183F67;
+				position: absolute;
+				z-index: 1;
+				bottom: 0;
+				right: 0;
+				display: block;
+				font-size: 12rem;
+				line-height: 8rem;
+				text-align: right;
+			}
+			.blue {
 				background-color: #183F67;
 			    position: relative;
 			    color: white;
-			    padding: 60px 0px;
+			    padding: 90px 0px;
 			    overflow: hidden;
 			}
-			section.blue:before {
+			.blue:before {
 				content: '';
 				position: absolute;
 				top: 0;
@@ -181,7 +192,7 @@
 				transform: skew(-10deg, 0deg);
 				display: none;
 			}
-			section.blue h2 {
+			.blue h2 {
 				font-family: "futura-pt";
 				font-weight: 300;
 				font-size: 1.6rem;
@@ -189,13 +200,17 @@
 				margin-bottom: 30px;
 				color: rgb(179, 179, 179);
 			}
-			section.blue h2 strong {
+			.blue h2 strong {
 				font-family: "futura-pt-condensed";
 				margin-bottom: 30px;
 				font-weight: 700;
 				color: white;
 			}
-			section.blue p strong {
+			.blue p {
+				font-size: 2rem;
+				line-height: 1;
+			}
+			.blue p strong {
 				color: #54A5D9;
 			}
 			section .accent-up {
@@ -206,12 +221,12 @@
 				max-width: 186px;
 			}
 			.flow-container {
-				width: 75%;
+				width: 78%;
 				float: right;
 			}
 			.blue-blurb {
-				width: 50%;
-				max-width: 400px;
+				width: 60%;
+				margin-bottom: 60px;
 			}
 			#elevate-line {
 				width: 97%;
@@ -219,13 +234,15 @@
 				display: block;
 				margin: 0 auto;
 			}
-			section.grey {
-				background-color: rgb(179, 179, 179);
+			.grey {
+				/* background-color: rgb(179, 179, 179); */
+				background-color: #54A5D9;
 				position: relative;
-				padding: 60px 0px;
-				height: 800px;
+				padding: 90px 0px;
+				overflow: hidden;
+				/* height: 800px; */
 			}
-			section.grey:before {
+			.grey:before {
 				content: '';
 				position: absolute;
 				top: 0;
@@ -238,6 +255,83 @@
 				-ms-transform: skew(-10deg, 0deg);
 				-o-transform: skew(-10deg, 0deg);
 				transform: skew(-10deg, 0deg);
+			}
+			.grey h1 {
+				font-size: 16rem;
+				line-height: 11rem;
+				color: white;
+				text-align: right;
+			}
+			.grey h3 {
+				color: #183F67;
+			}
+			.grey p {
+				color: #000C34;
+			}
+			.column-cell {
+				position: relative;
+				width: 70%;
+			}
+			.column-text-cell {
+				width: 30%;
+				margin-right: 50px;
+			}
+			.column-text-cell p {
+				font-size: 1.2rem;
+			}
+			.column-cell:first-child {
+				margin-right: 50px;
+			}
+			.cell-img-container img {
+				width: 100%;
+				position: relative;
+				object-fit: cover;
+				object-position: 0% 0%;
+				box-shadow: 0px 0px 5px 0px #000C34;
+			}
+			.column-cell h3 {
+				text-align: right;
+				position: relative;
+			}
+			.cell-img-container {
+				position: relative;
+			}
+			.cell-img-container:before {
+				content: '';
+				position: absolute;
+				top: 25px;
+				left: 0px;
+				height: 80%;
+				width: 100%;
+				z-index: 0;
+				background: white;
+				-webkit-transform: skew(-10deg, 0deg);
+				-moz-transform: skew(-10deg, 0deg);
+				-ms-transform: skew(-10deg, 0deg);
+				-o-transform: skew(-10deg, 0deg);
+				transform: skew(-10deg, 0deg);
+			}
+			.columns-container .row:before,
+			.columns-container .row:after {
+				content: ' ';
+				display: table;
+			}
+			.columns-container .row:after {
+				clear: both;
+			}
+			.columns-container .row {
+				margin-bottom: 25px;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				position: relative;
+			}
+			.columns-container .row.reversed {
+				flex-direction: row-reverse;
+			}
+			#YOU {
+				margin-bottom: 300px;
 			}
 		</style>
 		<script src="https://use.typekit.net/bcl0jlg.js"></script>
@@ -253,7 +347,8 @@
 			</div>
 			<img class="pin-img" id='dunk' src="./dunk1.jpg" alt="man slam-dunking basketball" />
 			<img class="pin-img" id='dunk2' src="./dunk2.jpg" alt="another man slam-dunking basketball" />
-			<img id='running' src="./running.jpg" alt="football players running" />
+			<img class="pin-img" id='running' src="./running.jpg" alt="football players running" />
+			<h1 id="hiddenMsg">NEVER STOP CLIMBING</h1>
 		</section>
 		<section id="blue" class="blue">
 			<div class="flow-container">
@@ -261,11 +356,59 @@
 				<div class="blue-blurb">
 					<p><strong>Summit Sports Group</strong> is a full-service athlete management firm dedicated to elevating our clients' <strong>careers</strong> both on and off the court.</p>
 				</div>
-				<img id="elevate-line" src="./elevate-line.svg" alt="services">
+				<div class="columns-container">
+					<div class="row" id="row-1">
+						<div class="column-cell">
+							<div class="cell-img-container">
+								<h3>PLAYER DEVELOPMENT</h3>
+								<img src="./training.jpg" alt="football players training">
+							</div>
+						</div>
+						<div class="column-text-cell">
+							<p>At Summit, we use our extensive network of NBA front of ce relationships to strategically secure and select NBA pre-draft workout opportunities in order to maximize our clients’ draft stock.</p>
+						</div>
+					</div>
+					<div class="row reversed" id="row-2">
+						<div class="column-cell">
+							<div class="cell-img-container">
+								<h3>PRE-DRAFT PREPARATION</h3>
+								<img src="./bball-yell.jpg" alt="football players training">
+							</div>
+						</div>
+						<div class="column-text-cell">
+							<p>At Summit, we use our extensive network of NBA front of ce relationships to strategically secure and select NBA pre-draft workout opportunities in order to maximize our clients’ draft stock.</p>
+						</div>
+					</div>
+					<div class="row" id="row-3">
+						<div class="column-cell">
+							<div class="cell-img-container">
+								<h3>BUILDING YOUR BRAND</h3>
+								<img src="./bball-shooting.jpg" alt="football players training">
+							</div>
+						</div>
+						<div class="column-text-cell">
+							<p>At Summit, we use our extensive network of NBA front office relationships to strategically secure and select NBA pre-draft workout opportunities in order to maximize our clients’ draft stock.</p>
+						</div>
+					</div>
+					<div class="row reversed" id="row-4">
+						<div class="column-cell">
+							<div class="cell-img-container">
+								<h3>LONG-TERM VISION</h3>
+								<img src="./dolphins.jpg" alt="football players training">
+							</div>
+						</div>
+						<div class="column-text-cell">
+							<p>At Summit, we use our extensive network of NBA front of ce relationships to strategically secure and select NBA pre-draft workout opportunities in order to maximize our clients’ draft stock.</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 		<section class="grey">
 			<div class="flow-container">
+				<h1>IT'S</h1>
+				<h1>ABOUT</h1>
+				<h1 id="YOU">YOU</h1>
 				<h3>Some other info about Summit</h3>
 				<p>check out these stats</p>
 				<p>what's that? a case study? neat!</p>
