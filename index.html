@@ -2,338 +2,7 @@
 <html>
 	<head>
 		<title>Summit Sports Group</title>
-		<style type="text/css" media="screen">
-			/* http://meyerweb.com/eric/tools/css/reset/ 
-			   v2.0 | 20110126
-			   License: none (public domain)
-			*/
-
-			html, body, div, span, applet, object, iframe,
-			h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-			a, abbr, acronym, address, big, cite, code,
-			del, dfn, em, img, ins, kbd, q, s, samp,
-			small, strike, strong, sub, sup, tt, var,
-			b, u, i, center,
-			dl, dt, dd, ol, ul, li,
-			fieldset, form, label, legend,
-			table, caption, tbody, tfoot, thead, tr, th, td,
-			article, aside, canvas, details, embed, 
-			figure, figcaption, footer, header, hgroup, 
-			menu, nav, output, ruby, section, summary,
-			time, mark, audio, video {
-				margin: 0;
-				padding: 0;
-				border: 0;
-				font-size: 100%;
-				font: inherit;
-				vertical-align: baseline;
-			}
-			/* HTML5 display-role reset for older browsers */
-			article, aside, details, figcaption, figure, 
-			footer, header, hgroup, menu, nav, section {
-				display: block;
-			}
-			body {
-				/* line-height: 1; */
-			}
-			ol, ul {
-				list-style: none;
-			}
-			blockquote, q {
-				quotes: none;
-			}
-			blockquote:before, blockquote:after,
-			q:before, q:after {
-				content: '';
-				content: none;
-			}
-			table {
-				border-collapse: collapse;
-				border-spacing: 0;
-			}
-			.landing img {
-				max-width: 100%;
-				display: block;
-			}
-			body {
-				font-family: "futura-pt-condensed",sans-serif;
-				font-style: normal;
-				font-weight: 500;
-				font-size: 1.6rem;
-				-webkit-font-smoothing: antialiased;
-			}
-			section {
-				box-sizing: border-box;
-			}
-			#landing {
-			    position: relative;
-			}
-			#landing:before {
-				content: '';
-				position: fixed;
-				top: 0;
-				left: -120px;
-				height: 100%;
-				width: 20%;
-				background: white;
-				-webkit-transform: skew(-10deg, 0deg);
-				-moz-transform: skew(-10deg, 0deg);
-				-ms-transform: skew(-10deg, 0deg);
-				-o-transform: skew(-10deg, 0deg);
-				transform: skew(-10deg, 0deg);
-				z-index: 11;
-				transition: width 1s ease;
-			}
-			#landing.loading:before {
-				width: 125%;
-			}
-			#logo {
-				width: 7%;
-				max-width: 105px;
-				min-width: 100px;
-				position: fixed;
-				top: 40px;
-				left: 40px;
-				z-index: 11;
-				will-change: top, left;
-				transition: top 1s ease, left 1s ease;
-			}
-			#loading {
-				position: fixed;
-				top: 0px;
-				bottom: 0px;
-				left: 0px;
-				right: 0px;
-				z-index: 1;
-				background: white;
-			}
-			.hidden {
-				display: none;
-			}
-			#logo.loading {
-				top: 40%;
-				left: 48%;
-			}
-			#slider {
-				height: 2800px;
-				overflow: scroll;
-			}
-			#dunk { z-index: 5; }
-			#dunk2 { z-index: 3; }
-			#running {z-index: 2;}
-			.pin-img {
-				position: fixed;
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				object-position: 0% 0%;
-				/* box-shadow: 0px 0px 15px -5px #183F67; */
-			}
-			.markets-links {
-				position: fixed;
-				top: 20px;
-				right: 10px;
-				font-family: 'futura-pt';
-				font-size: .7rem;
-				-webkit-font-smoothing: antialiased;
-				letter-spacing: 10px;
-				z-index: 10;
-			}
-			.markets-links a {
-				color: white;
-				text-decoration: none;
-				margin-right: 15px;
-			}
-			.markets-links a.dark {
-				color: #183F67;
-			}
-			.markets-links a:hover {
-				color: #54A5D9;
-			}
-			.markets-links a:after {
-				content: '|';
-				color: #54A5D9;
-				position: relative;
-				right: -15px;
-			}
-			.markets-links a:last-child:after {
-				display: none;
-			}
-			#hiddenMsg {
-				color: #183F67;
-				position: absolute;
-				z-index: 1;
-				bottom: 0;
-				right: 0;
-				display: block;
-				font-size: 12rem;
-				line-height: 8rem;
-				text-align: right;
-			}
-			.blue {
-				background-color: #183F67;
-			    position: relative;
-			    color: white;
-			    padding: 90px 0px;
-			    overflow: hidden;
-			}
-			.blue:before {
-				content: '';
-				position: absolute;
-				top: 0;
-				right: -120px;
-				height: 100%;
-				width: 22%;
-				background: white;
-				-webkit-transform: skew(-10deg, 0deg);
-				-moz-transform: skew(-10deg, 0deg);
-				-ms-transform: skew(-10deg, 0deg);
-				-o-transform: skew(-10deg, 0deg);
-				transform: skew(-10deg, 0deg);
-				display: none;
-			}
-			.blue h2 {
-				font-family: "futura-pt";
-				font-weight: 300;
-				font-size: 1.6rem;
-				letter-spacing: 15px;
-				margin-bottom: 30px;
-				color: rgb(179, 179, 179);
-			}
-			.blue h2 strong {
-				font-family: "futura-pt-condensed";
-				margin-bottom: 30px;
-				font-weight: 700;
-				color: white;
-			}
-			.blue p {
-				font-size: 2rem;
-				line-height: 1;
-			}
-			.blue p strong {
-				color: #54A5D9;
-			}
-			section .accent-up {
-				position: absolute;
-				right: 0px;
-				top: 0px;
-				width: 100%;
-				max-width: 186px;
-			}
-			.flow-container {
-				width: 78%;
-				float: right;
-			}
-			.blue-blurb {
-				width: 60%;
-				margin-bottom: 60px;
-			}
-			#elevate-line {
-				width: 97%;
-				max-width: 675px;
-				display: block;
-				margin: 0 auto;
-			}
-			.grey {
-				/* background-color: rgb(179, 179, 179); */
-				background-color: #54A5D9;
-				position: relative;
-				padding: 90px 0px;
-				overflow: hidden;
-				/* height: 800px; */
-			}
-			.grey:before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: -120px;
-				height: 100%;
-				width: 20%;
-				background: white;
-				-webkit-transform: skew(-10deg, 0deg);
-				-moz-transform: skew(-10deg, 0deg);
-				-ms-transform: skew(-10deg, 0deg);
-				-o-transform: skew(-10deg, 0deg);
-				transform: skew(-10deg, 0deg);
-			}
-			.grey h1 {
-				font-size: 16rem;
-				line-height: 11rem;
-				color: white;
-				text-align: right;
-			}
-			.grey h3 {
-				color: #183F67;
-			}
-			.grey p {
-				color: #000C34;
-			}
-			.column-cell {
-				position: relative;
-				width: 70%;
-			}
-			.column-text-cell {
-				width: 30%;
-				margin-right: 50px;
-			}
-			.column-text-cell p {
-				font-size: 1.2rem;
-			}
-			.column-cell:first-child {
-				margin-right: 50px;
-			}
-			.cell-img-container img {
-				width: 100%;
-				position: relative;
-				object-fit: cover;
-				object-position: 0% 0%;
-				box-shadow: 0px 0px 5px 0px #000C34;
-			}
-			.column-cell h3 {
-				text-align: right;
-				position: relative;
-			}
-			.cell-img-container {
-				position: relative;
-			}
-			.cell-img-container:before {
-				content: '';
-				position: absolute;
-				top: 25px;
-				left: 0px;
-				height: 80%;
-				width: 100%;
-				z-index: 0;
-				background: white;
-				-webkit-transform: skew(-10deg, 0deg);
-				-moz-transform: skew(-10deg, 0deg);
-				-ms-transform: skew(-10deg, 0deg);
-				-o-transform: skew(-10deg, 0deg);
-				transform: skew(-10deg, 0deg);
-			}
-			.columns-container .row:before,
-			.columns-container .row:after {
-				content: ' ';
-				display: table;
-			}
-			.columns-container .row:after {
-				clear: both;
-			}
-			.columns-container .row {
-				margin-bottom: 25px;
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				align-items: center;
-				position: relative;
-			}
-			.columns-container .row.reversed {
-				flex-direction: row-reverse;
-			}
-			#YOU {
-				margin-bottom: 300px;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="./index.css"/>
 		<script src="https://use.typekit.net/bcl0jlg.js"></script>
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	</head>
@@ -346,7 +15,7 @@
 				<a href="#">BASKETBALL</a>
 			</div>
 			<img class="pin-img" id='dunk' src="./dunk1.jpg" alt="man slam-dunking basketball" />
-			<img class="pin-img" id='dunk2' src="./dunk2.jpg" alt="another man slam-dunking basketball" />
+			<img class="pin-img" id='dunk2' src="./soccer2.jpg" alt="soccer player with ball" />
 			<img class="pin-img" id='running' src="./running.jpg" alt="football players running" />
 			<h1 id="hiddenMsg">NEVER STOP CLIMBING</h1>
 		</section>
@@ -365,7 +34,7 @@
 							</div>
 						</div>
 						<div class="column-text-cell">
-							<p>At Summit, we use our extensive network of NBA front of ce relationships to strategically secure and select NBA pre-draft workout opportunities in order to maximize our clients’ draft stock.</p>
+							<p>Summit, in partnership with a select group of elite training facilities, has developed a state-of-the-art training program and schedule that will ensure that you are fully prepared for the NBA Draft Combine.</p>
 						</div>
 					</div>
 					<div class="row reversed" id="row-2">
@@ -376,7 +45,7 @@
 							</div>
 						</div>
 						<div class="column-text-cell">
-							<p>At Summit, we use our extensive network of NBA front of ce relationships to strategically secure and select NBA pre-draft workout opportunities in order to maximize our clients’ draft stock.</p>
+							<p>At Summit, we use our extensive network of NBA front office relationships to strategically secure and select NBA pre-draft workout opportunities in order to maximize our clients’ draft stock.</p>
 						</div>
 					</div>
 					<div class="row" id="row-3">
@@ -387,7 +56,7 @@
 							</div>
 						</div>
 						<div class="column-text-cell">
-							<p>At Summit, we use our extensive network of NBA front office relationships to strategically secure and select NBA pre-draft workout opportunities in order to maximize our clients’ draft stock.</p>
+							<p>At Summit, we take a comprehensive and proactive approach to marketing that ensures Summit clients develop their personal brands and have the tools in place to maximize the value they bring to their off-the-court partners.</p>
 						</div>
 					</div>
 					<div class="row reversed" id="row-4">
@@ -398,17 +67,19 @@
 							</div>
 						</div>
 						<div class="column-text-cell">
-							<p>At Summit, we use our extensive network of NBA front of ce relationships to strategically secure and select NBA pre-draft workout opportunities in order to maximize our clients’ draft stock.</p>
+							<p>One of the driving principles behind Summit’s vision is ensuring our clients are aware of the possibilities that exist outside the world of basketball. Summit will work with you to plan for and achieve your business objectives through targeted development of strategic relationships and long-term planning.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="grey">
+		<section class="light-blue">
 			<div class="flow-container">
-				<h1>IT'S</h1>
-				<h1>ABOUT</h1>
-				<h1 id="YOU">YOU</h1>
+				<div class="section-title-container" id="light-blue">
+					<h1>IT'S</h1>
+					<h1>ABOUT</h1>
+					<h1 id="YOU">YOU</h1>
+				</div>
 				<h3>Some other info about Summit</h3>
 				<p>check out these stats</p>
 				<p>what's that? a case study? neat!</p>
@@ -416,9 +87,90 @@
 				<p>another p tag</p>
 			</div>
 		</section>
+		<section class="grey">
+			<div class="flow-container">
+				<div class="section-title-container" id="grey">
+					<h1>WHO</h1>
+					<h1 id="WE">WE</h1>
+					<h1>ARE</h1>
+				</div>
+				<div class="blue-blurb">
+					<p>The <strong>Summit</strong> team is comprised of <strong>talented professionals</strong>  with the knowledge, experience and connections necessary to help every client thrive. Our team of <strong>lawyers</strong>, <strong>seasoned negotiators</strong>, <strong>marketing experts</strong>, <strong>community relations professionals</strong> and <strong>player development coaches</strong> are available around the clock to help our clients achieve success on and off the court/field. Our extensive network of league and corporate executives ensures that all clients receive complete exposure across all platforms.</p>
+					<p>Summit is committed to providing the attention and quality representation every player deserves. As a <strong>boutique agency</strong> with resources matching those of our larger counterparts, our focus is on <strong>quality</strong> rather than quantity. Maintaining a select roster of elite clients allows us to effectively manage <strong>every last detail</strong> of each athlete's career. From the day a client joins the Summit family, they will always be our top priority.</p>
+				</div>
+				<div class="columns-container">
+					<div class="row" id="team-row-1">
+						<div class="column-cell">
+							<div class="cell-img-container">
+								<h3>Neal Rosenshein, Esquire</h3>
+								<span class="team-member-certs">NBPA, FIBA Certified Agent</span>
+								<p>Neal is a seasoned negotiator with a deep understanding of the NBA collective bargaining agreement. He plays a central role in contract negotiations for Summit clients in both their on and off court endeavors and has negotiated millions of dollars in playing contracts for Summit clients. An NBPA and FIBA certified agent, Neal began his career in sports working for both SFX Sports and then for WMG’s athlete management practice. At both companies he negotiated and secured multi-million dollar endorsement deals across all major categories, for many high profile professional athletes. A licensed attorney who holds an MBA from the University of Oregon’s Warsaw Sports Marketing Center, Neal has served a wide variety of clients not only in complex playing-contract negotiations but also in securing global and domestic marketing deals.</p>
+							</div>
+						</div>
+						<div class="column-text-cell">
+						</div>
+					</div>
+					<div class="row reversed" id="team-row-2">
+						<div class="column-cell">
+							<div class="cell-img-container">
+								<h3>Erik Schmella</h3>
+								<span class="team-member-certs">NBPA Certified Agent</span>
+								<p>Erik’s strong relationships throughout the sports industry and in-depth knowledge of the inner-workings of the business side of sports, have proven to be an invaluable resource for Summit clients. Prior to founding Summit Sports Group, Erik was the Director of Finance for Wasserman Media Group (WMG) where he played a central role in the mergers and acquisitions that transformed WMG into one of the preeminent sports agencies in the world. Erik’s diligent commitment to the success of Summit clients, as well as his expertise in contract negotiation provide Summit clients with an unparalleled level of support. During his undergraduate studies at Boston College, Erik earned a bachelor’s degree from the Carroll School of Management and played football.</p>
+							</div>
+						</div>
+						<div class="column-text-cell">
+						</div>
+					</div>
+					<div class="row" id="team-row-3">
+						<div class="column-cell">
+							<div class="cell-img-container">
+								<h3>Tyler Thomas, Esquire</h3>
+								<span class="team-member-certs">Business &amp; Legal Affairs</span>
+								<p>A licensed attorney in both Washington and Californiawith a strong background in sports and entertainment, Tyler provides Summit clients with quality representation and legal advice. Tyler previously worked in the business and legal affairs department of The Weinstein Company, a major  lm studio where he worked on multi-million dollar production, distribution and talent agreements. He also worked at a leading entertainment law  rm where he contributed in the representation of several prominent recording artists and entertainers. Tyler is an expert in the NBA’s Collective Bargaining Agreement and plays an important role on Summit’s contract negotiation team. Further, Tyler provides valuable guidance to Summit clients in important matters such as protecting their intellectual property assets and business transactions.</p>
+							</div>
+						</div>
+						<div class="column-text-cell">
+						</div>
+					</div>
+					<div class="row reversed" id="team-row-4">
+						<div class="column-cell">
+							<div class="cell-img-container">
+								<h3>Mike Miller</h3>
+								<span class="team-member-certs">Director of Digital Marketing</span>
+								<p>Mike brings years of sports marketing and social media experience to the Summit team. Mike is instrumental in developing and managing the social media assets of Summit clients. He has a proven track record of leveraging these assets to add value for corporate partners in order to justify larger compensation packages and create new partnership opportunities. After working for a preeminent entertainment marketing and public relations agency, Mike worked for both the Action Sports World Tour and Dew Tour where he was intimately involved with the creation and implementation of athlete marketing strategies. Mike has served as a marketing consultant for elite brands and organizations including adidas, the United States Tennis Association and the Movember Foundation. Mike has his MBA in Sports Marketing from the University of Oregon Warsaw Sports Marketing Center.</p>
+							</div>
+						</div>
+						<div class="column-text-cell">
+						</div>
+					</div>
+					<div class="row" id="team-row-5">
+						<div class="column-cell">
+							<div class="cell-img-container">
+								<h3>Chris Ellison, Esquire</h3>
+								<span class="team-member-certs">General Counsel</span>
+								<p>An accomplished attorney, Chris has spent over ten years representing professional athletes, guiding them through each phase of their careers. Chris provides strong relationships throughout the sports industry and extensive experience negotiating lucrative playing and endorsement contracts. A seasoned representative, Chris provides Summit clients with a zealous advocate committed to their on and off the  eld endeavors. Chris played football at Brigham Young University and later attended law school at Pepperdine University. Chris’s two brothers, Keith and Kevin, both played in the Pac-10 (now Pac- 12) and the NFL. Keith played linebacker for Oregon State and the Bills, while Kevin played safety for USC and the Chargers.</p>
+							</div>
+						</div>
+						<div class="column-text-cell">
+						</div>
+					</div>
+					<div class="row reversed" id="team-row-6">
+						<div class="column-cell">
+							<div class="cell-img-container">
+								<h3>Kevin Tarca</h3>
+								<span class="team-member-certs">Director of Basketball Operations</span>
+								<p>Kevin brings years of basketball industry experience and relationships to the Summit team. Prior to joining Summit, Kevin worked at the Gazzelle Group, an industry leading marketing  rm, specializing in the representation of basketball coaches, and the marketing and production of major basketball events. Kevin serves as an invaluable resource to Summit clients and assists with all aspects of representation including player marketing, statistical analysis, client services. Kevin played basketball at Quinnipiac University from 2008-12, where he majored in Finance and Economics.</p>
+							</div>
+						</div>
+						<div class="column-text-cell">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<script src="./tween.js" type="text/javascript" charset="utf-8" async defer></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="./scroll.js"></script>
+		<script src="./scroll.js" async defer></script>
 		<script src="./index.js" type="text/javascript" charset="utf-8" async defer></script>
 	</body>
 </html>
