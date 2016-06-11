@@ -14,19 +14,19 @@ pinAnimations
 	.append(
 		TweenMax.fromTo($('#dunk'), 3,
 			{ css: { bottom: 0}},
-			{ css: { bottom: window.innerHeight }}
+			{ css: { bottom: window.innerHeight + 500 }}
 		)
 	)
 	.append(
 		TweenMax.fromTo($('#dunk2'), 3,
 			{ css: { bottom: 0}},
-			{ css: { bottom: window.innerHeight }}
+			{ css: { bottom: window.innerHeight + 500 }}
 		)
 	)
 	.append(
 		TweenMax.fromTo($('#running'), 3,
 			{ css: { bottom: 0}},
-			{ css: { bottom: window.innerHeight }}
+			{ css: { bottom: window.innerHeight + 500 }}
 		)
 	);
 

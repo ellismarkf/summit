@@ -84,8 +84,6 @@ section {
 }
 #logo {
 	width: 7%;
-	max-width: 105px;
-	min-width: 100px;
 	position: fixed;
 	top: 40px;
 	left: 40px;
@@ -329,9 +327,6 @@ section .accent-up {
 .columns-container .row.reversed {
 	flex-direction: row-reverse;
 }
-#YOU {
-	margin-bottom: 300px;
-}
 .grey {
 	background-color: rgb(179, 179, 179);
 	position: relative;
@@ -400,6 +395,56 @@ section .accent-up {
 }
 .grey p {
 	color: white;
+}
+
+@media screen and (max-width: 670px) {
+	.markets-links {
+		display: none;
+	}
+	.pin-img {
+		object-position: 50% 0%
+	}
+	#landing:before {
+		width: 40%;
+	}
+	#logo {
+		width: 15%;
+		position: fixed;
+		top: 20px;
+		left: 14px;
+		z-index: 11;
+	}
+	#hiddenMsg {
+		font-size: 8rem;
+		line-height: 5rem;
+	}
+	.blue-blurb {
+		width: 89%;
+	}
+	.columns-container .row {
+		display: block;
+	}
+	.cell-img-container:before {
+		top: 36px;
+	}
+	.column-cell {
+		width: auto;
+		margin-bottom: 20px;
+	}
+	.column-cell h3 {
+		font-size: 2.3rem;
+	}
+	.column-cell:first-child {
+		margin-right: 25px;
+	}
+	.column-text-cell {
+		width: auto;
+	}
+	.light-blue h1,
+	.grey h1 {
+		font-size: 9rem;
+		line-height: 6rem;
+	}
 }
 // grey: rgb(179, 179, 179)
 // light blue: #54A5D9
