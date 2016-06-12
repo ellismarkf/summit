@@ -284,6 +284,7 @@ section .accent-up {
 	width: 78%;
 	float: right;
 }
+
 .blue-blurb {
 	width: 75%;
 	margin: 100px 0px 60px;
@@ -467,7 +468,7 @@ section .accent-up {
 	color: white;
 }
 
-#family {
+#family, #splashy-intro {
 	position: relative;
 	padding: 0px 0px 90px;
 	overflow: hidden;
@@ -481,11 +482,13 @@ section .accent-up {
 	background-color: rgba(255, 255, 255, 0.5);
 }
 
-#family h1:first-child {
+#family h1:first-child,
+#splashy-intro h1:first-child {
 	padding-top: 50px;
 }
 
-#family h1:last-child {
+#family h1:last-child,
+#splashy-intro h1:last-child {
 	padding-bottom: 50px;
 }
 
@@ -504,7 +507,6 @@ section .accent-up {
 	line-height: 11rem;
 	color: #183F67;
 	text-align: right;
-	background-color: rgba(255, 255, 255, 0.5);
 }
 
 .white p {
@@ -598,6 +600,57 @@ section .accent-up {
 #contact input[type='submit']:hover {
 	cursor: pointer;
 	color: #183F67;
+}
+
+.service-detail {
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
+}
+
+.service-detail strong {
+	color: #54A5D9;
+	font-size: 2rem;
+}
+
+#early-call-to-action {
+	margin: 80px auto 60px;
+	display: block;
+	width: 30%;
+	text-decoration: none;
+	border: 1px solid #183F67;
+	color: #183F67;
+	background-color: white;
+	text-align: center;
+	-webkit-transform: skew(-10deg, 0deg);
+	-moz-transform: skew(-10deg, 0deg);
+	-ms-transform: skew(-10deg, 0deg);
+	-o-transform: skew(-10deg, 0deg);
+	transform: skew(-10deg, 0deg);
+	transition: background-color .3s ease;
+}
+
+#early-call-to-action:hover {
+	background-color: #183F67;
+	color: white;
+}
+
+.cf:before,
+.cf:after {
+	content: ' ';
+	display: table;
+}
+.cf:after {
+	clear: both;
+}
+
+#splashy-intro .section-title-container {
+	background-image: url('../assets/bball-yell.png');
+	background-size: 105%;
+}
+
+#splashy-intro h1 {
+	background-color: rgba(255, 255, 255, 0.7);
 }
 
 @media all
