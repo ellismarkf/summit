@@ -614,9 +614,10 @@ section .accent-up {
 }
 
 #early-call-to-action {
-	margin: 80px auto 60px;
+	margin: 130px auto 60px;
 	display: block;
 	width: 30%;
+	font-size: 4rem;
 	text-decoration: none;
 	border: 1px solid #183F67;
 	color: #183F67;
