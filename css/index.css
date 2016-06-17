@@ -164,6 +164,12 @@ section {
 .markets-links a:last-child:after {
 	display: none;
 }
+#twitter img, #instagram img {
+	width: 1%;
+	display: inline-block;
+	vertical-align: middle;
+	fill: #54A5D9;
+}
 #hiddenMsg {
 	color: white;
 	position: absolute;
@@ -206,13 +212,11 @@ section {
 
 #STOP {
 	background-image: url('../assets/oba2.jpg');
-	// background-position: 100% 25%;
 	z-index: 5
 }
 
 #CLIMBING {
-	background-image: url('../assets/running2.jpg');
-	// background-position: 100% 30%;
+	background-image: url('../assets/linebacker.jpg');
 	z-index: 3
 }
 
@@ -344,7 +348,7 @@ section .accent-up {
 	width: 30%;
 	margin-right: 50px;
 }
-.column-text-cell p {
+.column-text-cell li {
 	font-size: 2rem;
 }
 .column-cell:first-child {
@@ -398,6 +402,10 @@ section .accent-up {
 }
 .columns-container .row.reversed {
 	flex-direction: row-reverse;
+}
+
+.row.reversed .column-text-cell {
+	text-align: right;
 }
 .grey {
 	background-color: rgb(179, 179, 179);
@@ -514,7 +522,8 @@ section .accent-up {
 }
 
 #family .section-title-container {
-	background-image: url('../assets/fam.jpg');
+	background-image: url('../assets/predraft.jpg');
+	background-size: 100%;
 }
 
 #contact-form {
@@ -602,6 +611,15 @@ section .accent-up {
 	color: #183F67;
 }
 
+#contact textarea {
+	display: block;
+	width: 100%;
+	height: 250px;
+	font-family: 'futura-pt-condensed';
+	font-size: 1.4rem;
+	max-width: 100%;
+}
+
 .service-detail {
 	display: inline-block;
 	width: 30%;
@@ -646,7 +664,7 @@ section .accent-up {
 }
 
 #splashy-intro .section-title-container {
-	background-image: url('../assets/bball-yell.png');
+	background-image: url('../assets/dunk1.jpg');
 	background-size: 105%;
 }
 
@@ -662,9 +680,11 @@ section .accent-up {
 		.columns-container .row {
 			display: block;
 		}
-		.column-text-cell {
+		.column-text-cell,
+		.row.reversed .column-text-cell {
 			width: 70%;
 			margin-top: 25px;
+			text-align: center;
 		}
 
 		.blue-blurb {
