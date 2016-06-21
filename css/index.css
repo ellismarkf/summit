@@ -449,20 +449,7 @@ section .accent-up {
 	margin: -5px 0px 5px;
 	font-size: 1rem;
 }
-// .grey:before {
-// 	content: '';
-// 	position: absolute;
-// 	top: 0;
-// 	left: -120px;
-// 	height: 100%;
-// 	width: 20%;
-// 	background: white;
-// 	-webkit-transform: skew(-10deg, 0deg);
-// 	-moz-transform: skew(-10deg, 0deg);
-// 	-ms-transform: skew(-10deg, 0deg);
-// 	-o-transform: skew(-10deg, 0deg);
-// 	transform: skew(-10deg, 0deg);
-// }
+
 .grey h1 {
 	font-size: 16rem;
 	line-height: 11rem;
@@ -524,6 +511,22 @@ section .accent-up {
 #family .section-title-container {
 	background-image: url('../assets/predraft.jpg');
 	background-size: 100%;
+}
+
+#follow {
+	margin-bottom: 80px;
+}
+
+.instapic {
+	width: 30%;
+	display: inline-block;
+	margin-right: 10px;
+	box-shadow: 0px 0px 30px #000C34;
+}
+
+.instapic img {
+	max-width: 100%;
+	display: block;
 }
 
 #contact-form {

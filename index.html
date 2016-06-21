@@ -50,11 +50,6 @@
 				<h1 id="DO">DO</h1>
 			</div>
 			<div class="flow-container">
-				<div class="blue-blurb">
-					<p><strong>Summit Sports Group</strong> is a full-service athlete management firm dedicated to elevating our clients' <strong>careers</strong> both on and off the court or field.</p>
-					<p>We have three objectives: <strong>enhance</strong> your Draft position, <strong>maximize</strong> your on-and-off court/field earnings, and <strong>develop</strong> a plan for your post-playing career.
-					</p>
-				</div>
 				<div class="columns-container">
 					<div class="row" id="row-1">
 						<div class="column-cell">
@@ -65,10 +60,10 @@
 						</div>
 						<div class="column-text-cell">
 							<ul>
-								<li>Draft Preparation</li>
-								<li>Pre-Draft Training</li>
-								<li>Media Training</li>
-								<li>Draft Analysis &amp; Guidance</li>
+								<li>&#8226; Draft Preparation</li>
+								<li>&#8226; Pre-Draft Training</li>
+								<li>&#8226; Media Training</li>
+								<li>&#8226; Draft Analysis &amp; Guidance</li>
 							</ul>
 						</div>
 					</div>
@@ -81,10 +76,10 @@
 						</div>
 						<div class="column-text-cell">
 							<ul>
-								<li>Statistical Analysis</li>
-								<li>Market Breakdown</li>
-								<li>International Placement</li>
-								<li>Endorsement Deals</li>
+								<li>Statistical Analysis &#8226;</li>
+								<li>Market Breakdown &#8226;</li>
+								<li>International Placement &#8226;</li>
+								<li>Endorsement Deals &#8226;</li>
 							</ul>
 						</div>
 					</div>
@@ -97,11 +92,11 @@
 						</div>
 						<div class="column-text-cell">
 							<ul>
-								<li>Personal Brand Development</li>
-								<li>Endorsement Opportunities</li>
-								<li>Community &amp; Foundation Relations</li>
-								<li>Public Relations</li>
-								<li>Digital &amp; Social Media</li>
+								<li>&#8226; Personal Brand Development</li>
+								<li>&#8226; Endorsement Opportunities</li>
+								<li>&#8226; Community &amp; Foundation Relations</li>
+								<li>&#8226; Public Relations</li>
+								<li>&#8226; Digital &amp; Social Media</li>
 							</ul>
 						</div>
 					</div>
@@ -114,11 +109,11 @@
 						</div>
 						<div class="column-text-cell">
 							<ul>
-								<li>Financial Guidance</li>
-								<li>Legal Guidance</li>
-								<li>Networking</li>
-								<li>Philanthropy</li>
-								<li>Post-Career Planning</li>
+								<li>Financial Guidance &#8226;</li>
+								<li>Legal Guidance &#8226;</li>
+								<li>Networking &#8226;</li>
+								<li>Philanthropy &#8226;</li>
+								<li>Post-Career Planning &#8226;</li>
 							</ul>
 						</div>
 					</div>
@@ -138,9 +133,13 @@
 			</div>
 		</section>
 		<section  id="interact" class="blue">
-			<div class="section-title-container" id="grey">
+			<div class="section-title-container" id="follow">
 				<h1 id="INTERACT">FOLLOW</h1>
 				<h1>US</h1>
+			</div>
+			<div class="flow-container">
+				<!-- instafeed -->
+				<div id="instafeed"></div>
 			</div>
 		</section>
 		<section id="contact" class="white">
@@ -150,7 +149,6 @@
 			</div>
 			<div class="flow-container">
 				<div class="blue-blurb">
-					<p>Our team is standing by to start working with you and take you to the peak of your career and beyond.  Send us your name and a way to get a hold of you, and we'll reach out as soon as possible to get an understanding of your goals and go from there.</p>
 					<div id="contact-form">
 						<h2>REACH OUT</h2>
 						<form accept-charset="utf-8" action="submit_handler.php" method="post" enctype="application/x-www-form-urlencoded">
@@ -172,5 +170,19 @@
 		<script src="./js/vendor/tween.js" type="text/javascript" charset="utf-8"></script>
 		<script src="./js/vendor/scroll.js"></script>
 		<script src="./js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/vendor/insta.js"></script>
+		<script type="text/javascript">
+		    var feed = new Instafeed({
+		    	get: 'user',
+		    	resolution: 'standard_resolution',
+		    	userId: 1541806822,
+		        accessToken: '1541806822.d04ccc9.524adf69ae4e49978938294c932ae862',
+		        template: '<a class="instapic" href="{{link}}"><img src="{{image}}" /></a>'
+		    });
+		    feed.run();
+		</script>
 	</body>
 </html>
+<!-- 
+access_token=588871419.d04ccc9.80d5eed3d9164890a9a78384995c33d9
+access_token=1541806822.d04ccc9.524adf69ae4e49978938294c932ae862 -->
