@@ -25,9 +25,9 @@ controller.addTween('#CLIMBING',
 );
 
 // controller.addTween('#row-1', TweenMax.from( $('#row-1'), .25, {css:{right:'2000px'}, ease:Quad.easeInOut}));
-controller.addTween('#row-2', TweenMax.from( $('#row-2'), .25, {css:{left:'2000px'}, ease:Quad.easeInOut}));
-controller.addTween('#row-3', TweenMax.from( $('#row-3'), .25, {css:{right:'2000px'}, ease:Quad.easeInOut}));
-controller.addTween('#row-4', TweenMax.from( $('#row-4'), .25, {css:{left:'2000px'}, ease:Quad.easeInOut}));
+// controller.addTween('#row-2', TweenMax.from( $('#row-2'), .25, {css:{left:'2000px'}, ease:Quad.easeInOut}));
+// controller.addTween('#row-3', TweenMax.from( $('#row-3'), .25, {css:{right:'2000px'}, ease:Quad.easeInOut}));
+// controller.addTween('#row-4', TweenMax.from( $('#row-4'), .25, {css:{left:'2000px'}, ease:Quad.easeInOut}));
 
 controller.addTween('#CAREER', TweenMax.to( $('#CAREER'), .25, {css:{color:'#54A5D9'}, ease:Quad.easeInOut}));
 controller.addTween('#DO', TweenMax.to( $('#DO'), .25, {css:{color:'#54A5D9'}, ease:Quad.easeInOut}));
