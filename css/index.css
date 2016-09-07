@@ -849,7 +849,7 @@ section .accent-up {
 		display: block;
 	}
 	.cell-img-container:before {
-		top: 76px;
+		top: 90px;
 	}
 	.column-cell {
 		width: auto;
@@ -866,7 +866,8 @@ section .accent-up {
 	}
 
 	#mktg-mgmt {
-		font-size: 4.1rem;
+		font-size: 4rem;
+		line-height: 3rem;
 	}
 
 	.light-blue h1,
