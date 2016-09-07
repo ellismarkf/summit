@@ -211,12 +211,12 @@ section {
 }
 
 #STOP {
-	background-image: url('../assets/oba2.jpg');
+	background-image: url('../assets/linebacker.jpg');
 	z-index: 5
 }
 
 #CLIMBING {
-	background-image: url('../assets/linebacker.jpg');
+	background-image: url('../assets/oba2.jpg');
 	z-index: 3
 }
 
@@ -682,7 +682,7 @@ section .accent-up {
 }
 
 #splashy-intro .section-title-container {
-	background-image: url('../assets/dunk1.jpg');
+	background-image: url('../assets/lloyd-redskins.jpg');
 	background-size: 105%;
 }
 
