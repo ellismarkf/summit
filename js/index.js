@@ -10,7 +10,7 @@ controller.addTween(
 controller.addTween(
 	50, 
 	TweenMax.fromTo($('#STOP'), 2, 
-		{css:{backgroundPosition: '100% 50%'}, immediateRender:true, ease:Quad.easeInOut}, 
+		{css:{backgroundPosition: '100% 25%'}, immediateRender:true, ease:Quad.easeInOut}, 
 		{css:{backgroundPosition: '100% 10%'}}),
 	750,
 	100
