@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+    <meta name="google-site-verification" content="Gr9J5k1f4kamYSe7S9uKaQx6yVeP1GP6-3pl-RnecJA" />
 		<title>Summit Sports Group</title>
 		<link rel="stylesheet" type="text/css" href="./css/index.css"/>
 		<link rel="icon" type="image/png" href="./assets/summit-icon.png">
@@ -10,7 +11,7 @@
 	<body>
 		<section id="landing" >
 			<a href="#landing">
-				<img id="logo"  src="./assets/ol2-01.svg" alt="logo" />
+				<img id="logo"  src="./assets/SummitLogoUpdate.png" alt="logo" />
 			</a>
 			<div class="markets-links">
 				<a id="instagram" href="https://www.instagram.com/summitsportsg/" target="_blank">
@@ -41,7 +42,6 @@
 				</div>
 			</div>
 			<div class="cf"></div>
-			<a id='early-call-to-action' href="#contact-form" title="">START TODAY</a>
 		</section>
 		<section id="services" class="blue">
 			<div class="section-title-container">
@@ -55,7 +55,7 @@
 						<div class="column-cell">
 							<div class="cell-img-container">
 								<h3>PLAYER DEVELOPMENT</h3>
-								<img src="./assets/jazz1.jpg" alt="man working out in gym">
+								<img src="./assets/development.jpg" alt="man working out in gym">
 							</div>
 						</div>
 						<div class="column-text-cell">
@@ -87,7 +87,7 @@
 						<div class="column-cell">
 							<div class="cell-img-container">
 								<h3 id="mktg-mgmt">MARKETING &amp; BRAND MANAGEMENT</h3>
-								<img src="./assets/marketing.png" alt="man signing documents">
+								<img src="./assets/marketing-2.png" alt="man signing documents">
 							</div>
 						</div>
 						<div class="column-text-cell">
@@ -128,7 +128,7 @@
 			</div>
 			<div class="flow-container">
 				<div class="blue-blurb">
-					<p>We foster a family atmosphere among our clients, the Summit team and our extended network of business and community partners, creating an unparalleled representation experience individually tailored to each client. We view representation as a lifelong partnership that does not begin and end with negotiating the next playing contract or endorsement deal. Long after your playing days, Summit will be there to guide your career.</p>
+          <p>We foster a family atmosphere among our clients, the Summit team and our extended network of business and community partners, creating an unparalleled representation experience individually tailored to each client. We view representation as a lifelong partnership that does not begin and end with negotiating the next playing contract or endorsement deal. Long after your playing days, Summit will be there to guide your career.</p>
 				</div>
 			</div>
 		</section>
@@ -154,9 +154,12 @@
 			</div>
 			<div class="flow-container">
 				<div class="blue-blurb">
+          <a class="cta-button" href="tel:1-206-915-4424" title="">CALL US</a>
+          <p class="phone-number">Phone: 206-915-4424</p>
+          <p class="phone-number">Fax: 206-201-5360</p>
 					<div id="contact-form">
 						<h2>REACH OUT</h2>
-						<form accept-charset="utf-8" action="submit_handler.php" method="post" enctype="application/x-www-form-urlencoded">
+						<form accept-charset="utf-8">
 							<label for="name">Name</label>
 							<input type="text" name="name" />
 							<label for="email">Email</label>
@@ -165,13 +168,20 @@
 							<input type="tel" name="phone" />
 							<label for="msg">Message</label>
 							<textarea name="msg"></textarea>
-							<input type="submit" name="submit" />
-						</form>
+              <input type="submit" name="submit" />
+              <a href="" target="_blank" id="submit">Submit</a>
+            </form>
+            <div id="submit-success-msg">
+              <h1>
+                We've received your message, and we'll get back to you as soon as we can.  Keep climbing!
+              </h1>
+            </div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://smtpjs.com/smtp.js"></script>
 		<script src="./js/vendor/tween.js" type="text/javascript" charset="utf-8"></script>
 		<script src="./js/vendor/scroll.js"></script>
 		<script src="./js/index.js" type="text/javascript" charset="utf-8"></script>
@@ -184,10 +194,31 @@
 		        accessToken: '1541806822.d04ccc9.524adf69ae4e49978938294c932ae862',
 		        template: '<a class="instapic" href="{{link}}" target="_blank"><img src="{{image}}" /></a>'
 		    });
-		    feed.run();
+        feed.run();
+        var form = document.querySelector('#contact-form form');
+        var successMsg = document.querySelector('#submit-success-msg');
+        var submitBtn = document.querySelector('#submit');
+        var dest = 'info@summitsportsgroup.com';
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          var formData = new FormData(form);
+          var [name, email, phone, msg] = formData;
+          var message = encodeURIComponent(msg[1]);
+          var fullMsg = "Name:" + "\n" + name[1] + "\n\nEmail:\n" + email[1] + "\n\nPhone #:\n" + phone[1] + "\n\nMessage:\n" + msg[1];
+          var finalMessage = encodeURIComponent(fullMsg);
+          var href = `mailto:${dest}?subject=Summit%20Client%20Contact%20Form%20Submission&body=${finalMessage}`;
+          submitBtn.href = href;
+          submitBtn.click();
+          var timeoutId = setTimeout(function() {
+            form.classList.add('hidden');
+            successMsg.classList.add('visible');
+          }, 2000)
+        });
 		</script>
 	</body>
 </html>
 <!-- 
+      // e4785ab4-aa93-4588-b41d-81f5da5908f3
+      // ba206fd2-887c-4ea6-9e1e-91b2128fa5bc
 access_token=588871419.d04ccc9.80d5eed3d9164890a9a78384995c33d9
 access_token=1541806822.d04ccc9.524adf69ae4e49978938294c932ae862 -->

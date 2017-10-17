@@ -64,28 +64,30 @@ section {
 	position: relative;
 	overflow: hidden;
 }
-// #landing:before {
-// 	content: '';
-// 	position: fixed;
-// 	top: 0;
-// 	left: -120px;
-// 	height: 100%;
-// 	width: 20%;
-// 	background: white;
-// 	-webkit-transform: skew(-10deg, 0deg);
-// 	-moz-transform: skew(-10deg, 0deg);
-// 	-ms-transform: skew(-10deg, 0deg);
-// 	-o-transform: skew(-10deg, 0deg);
-// 	transform: skew(-10deg, 0deg);
-// 	z-index: 11;
-// 	transition: width 1s ease;
-// 	box-shadow: 0px 0px 15px -5px black;
-// }
+ /* #landing:before { */
+ 	/* content: ''; */
+ 	/* position: fixed; */
+ 	/* top: 0; */
+ 	/* left: -120px; */
+ 	/* height: 100%; */
+ 	/* width: 20%; */
+ 	/* background: white; */
+ 	/* -webkit-transform: skew(-10deg, 0deg); */
+ 	/* -moz-transform: skew(-10deg, 0deg); */
+ 	/* -ms-transform: skew(-10deg, 0deg); */
+ 	/* -o-transform: skew(-10deg, 0deg); */
+ 	/* transform: skew(-10deg, 0deg); */
+ 	/* z-index: 11; */
+ 	/* transition: width 1s ease; */
+ 	/* box-shadow: 0px 0px 15px -5px black; */
+ /* } */
 #landing.loading:before {
 	width: 125%;
 }
-#logo {
-	width: 7%;
+#landing #logo {
+  width: 12%;
+  min-width: 155px;
+  max-width: 175px;
 	position: fixed;
 	top: 13px;
 	left: 40px;
@@ -149,6 +151,10 @@ section {
 	text-decoration: none;
 	margin-right: 15px;
 }
+.markets-links a#tel {
+  letter-spacing: 5px;
+  font-weight: 600;
+}
 .markets-links a.dark {
 	color: #183F67;
 }
@@ -196,7 +202,7 @@ section {
 	text-align: right;
 	background-size: 100%;
 	background-repeat: no-repeat;
-	box-shadow: inset 0 0 0 1000px rgba(24, 63, 103, .5),
+	box-shadow: inset 0 0 0 1000px rgba(24, 62, 103, 0.50),
 				0px 0px 15px 0px black;
 }
 
@@ -204,19 +210,20 @@ section {
 	box-shadow: 0px 0px 15px 0px black;
 }
 
+
 #NEVER {
-	background-image: url('../assets/dunk2.jpg');
-	background-position: 100% 33%;
+	background-image: url('../assets/never.jpg');
+	background-position: 100% 15%;
 	z-index: 7
 }
 
 #STOP {
-	background-image: url('../assets/linebacker.jpg');
+	background-image: url('../assets/stop.jpg');
 	z-index: 5
 }
 
 #CLIMBING {
-	background-image: url('../assets/oba2.jpg');
+	background-image: url('../assets/climbing.jpg');
 	z-index: 3
 }
 
@@ -287,12 +294,12 @@ section .accent-up {
 }
 .flow-container {
 	width: 70%;
-	// float: right;
+	/* float: right; */
 	margin: 0 auto;
 }
 
 .blue-blurb {
-	// width: 75%;
+	/* width: 75%; */
 	margin: 100px 0px 60px;
 }
 .blue-blurb p {
@@ -524,7 +531,7 @@ section .accent-up {
 }
 
 #family .section-title-container {
-	background-image: url('../assets/predraft.jpg');
+	background-image: url('../assets/about-you.jpg');
 	background-size: 100%;
 }
 
@@ -553,7 +560,9 @@ section .accent-up {
 
 #contact form {
 	padding: 80px;
-	display: block;
+  display: block;
+  position: relative;
+  transition: top 500ms ease, opacity 500ms ease;
 }
 
 #contact-form:before {
@@ -583,6 +592,39 @@ section .accent-up {
 
 #contact form label {
 	color: #54A5D9;
+}
+
+#contact form.hidden {
+  top: 50px;
+  opacity: 0;
+  display: none;
+}
+
+#contact #submit-success-msg {
+  visibility: hidden;
+  opacity: 0;
+  position: relative;
+  display: none;
+  transition: opacity 500ms ease;
+  color: white;
+}
+
+#contact #submit-success-msg h1 {
+  color: white;
+  font-size: 3rem;
+  padding: 90px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 4rem;
+}
+
+#contact #submit-success-msg.visible {
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 #contact input[type='text'],
@@ -624,6 +666,10 @@ section .accent-up {
 	transform: skew(-10deg, 0deg);
 }
 
+#contact a#submit {
+  display: none;
+}
+
 #contact input[type='submit']:hover {
 	cursor: pointer;
 	color: #183F67;
@@ -649,8 +695,9 @@ section .accent-up {
 	font-size: 2rem;
 }
 
-#early-call-to-action {
-	margin: 130px auto 60px;
+#early-call-to-action,
+.cta-button {
+	margin: 130px auto 15px;
 	display: block;
 	width: 30%;
 	font-size: 4rem;
@@ -667,7 +714,8 @@ section .accent-up {
 	transition: background-color .3s ease;
 }
 
-#early-call-to-action:hover {
+#early-call-to-action:hover,
+.cta-button:hover {
 	background-color: #183F67;
 	color: white;
 }
@@ -682,7 +730,7 @@ section .accent-up {
 }
 
 #splashy-intro .section-title-container {
-	background-image: url('../assets/lloyd-redskins.jpg');
+	background-image: url('../assets/elevate.jpg');
 	background-size: 105%;
 }
 
@@ -737,7 +785,12 @@ section .accent-up {
 	}
 	.markets-links a {
 		display: none;
-	}
+  }
+	.markets-links a#tel {
+    display: initial;
+    font-size: 2rem;
+    margin-right: 38px;
+  }
 	.pin-img {
 		object-position: 50% 0%
 	}
@@ -782,9 +835,9 @@ section .accent-up {
 	.column-text-cell {
 		width: auto;
 	}
-	// .column-text-cell ul {
-	// 	list-style-position: inside;
-	// }
+	/* .column-text-cell ul { */
+		/* list-style-position: inside; */
+	/* } */
 	.column-text-cell li {
 		font-size: 4rem;
 	}
@@ -823,7 +876,12 @@ section .accent-up {
 	}
 	.markets-links a {
 		display: none;
-	}
+  }
+	.markets-links a#tel {
+    display: initial;
+    font-size: 2rem;
+    margin-right: 38px;
+  }
 	.pin-img {
 		object-position: 50% 0%
 	}
@@ -877,7 +935,13 @@ section .accent-up {
 		line-height: 6rem;
 	}
 }
-// grey: rgb(179, 179, 179)
-// light blue: #54A5D9
-// dark blue: #183F67
-// shadow blue: #000C34
+
+p.phone-number {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 0px;
+}
+/* grey: rgb(179, 179, 179) */
+/* light blue: #54A5D9 */
+/* dark blue: #183F67 */
+/* shadow blue: #000C34 */

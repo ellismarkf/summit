@@ -2,7 +2,7 @@ var controller = $.superscrollorama()
 controller.addTween(
 	10, 
 	TweenMax.fromTo($('#NEVER'), 2, 
-		{css:{backgroundPosition: '100% 33%'}, immediateRender:true, ease:Quad.easeInOut}, 
+		{css:{backgroundPosition: '100% 15%'}, immediateRender:true, ease:Quad.easeInOut}, 
 		{css:{backgroundPosition: '100% 2%'}}),
 	750
 );
